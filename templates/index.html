@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        cursor: pointer;
+    }
+
+    .background {
+        background: black;
+        background-blend-mode: darken;
+        background-size: cover;
+    }
+
+    .nav-list {
+        width: 70%;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 180px;
+        border-radius: 50px;
+    }
+
+    .nav-list li {
+        list-style: none;
+        padding: 26px 30px;
+    }
+
+    .nav-list li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav-list li a:hover {
+        color: grey;
+    }
+
+    .rightnav {
+        width: 30%;
+        text-align: right;
+    }
+
+    #search {
+        padding: 5px;
+        font-size: 17px;
+        border: 2px solid grey;
+        border-radius: 9px;
+    }
+
+    .firstsection {
+        background-color: green;
+        height: 400px;
+    }
+
+    .secondsection {
+        background-color: blue;
+        height: 400px;
+    }
+
+    .box-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        max-width: 80%;
+        margin: auto;
+        height: 80%;
+    }
+
+    .firsthalf {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .secondhalf {
+        width: 30%;
+    }
+
+    .secondhalf img {
+        width: 70%;
+        border: 4px solid white;
+        border-radius: 150px;
+        display: block;
+        margin: auto;
+    }
+
+    .text-big {
+        font-family: 'Piazzolla', serif;
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    .text-small {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        margin: 7px 0;
+        border: 2px solid white;
+        border-radius: 8px;
+        background: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .btn-sm {
+        padding: 6px 10px;
+        vertical-align: middle;
+    }
+
+    .section {
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .section-Left {
+        flex-direction: row-reverse;
+    }
+
+    .paras {
+        padding: 0px 65px;
+    }
+
+    .thumbnail img {
+        width: 250px;
+        border: 2px solid black;
+        border-radius: 26px;
+        margin-top: 19px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .text-footer {
+        text-align: center;
+        padding: 30px 0;
+        font-family: 'Ubuntu', sans-serif;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+</style>
+</head>
+<body>
+ <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="ak">
+                <img src= ".\ak.jpg">
+            </div>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Inventory">Inventory</a></li>
+            <li><a href="#Finances">Finances</a></li>
+        </ul>
+        <div class="rightNav">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+    </nav>
+<h1>Required items after analyzing the Inventory</h1>
+    <form action = "/submit" method = 'post'>
+        <label for="Wheat">Wheat:</label><br>
+        <input type ="text" id = "wheat" name="wheat" value="0"><br>
+        <label for="Rice">:Rice</label><br>
+        <input type ="text" id = "rice" name="rice" value="0"><br><br>
+        <label for="Pulses">Pulses:</label><br>
+        <input type ="text" id = "Pulses" name="Pulses" value="0"><br>
+        <label for="Dairy_Products">Dairy_Products:</label><br>
+        <input type ="text" id = "Dairy_Products" name="Dairy_Products" value="0"><br>
+        <label for="Fruits">Fruits:</label><br>
+        <input type ="text" id = "Fruits" name="Fruits" value="0"><br>
+        <label for="Nuts_and_seeds">Nuts_and_seeds:</label><br>
+        <input type ="text" id = "Nuts_and_seeds" name="Nuts_and_seeds" value="0"><br>
+        <label for="Meat_and_poultry">Meat_and_poultry:</label><br>
+        <input type ="text" id = "Meat_and_poultry" name="Meat_and_poultry" value="0"><br>
+        <label for="Location_for_above_items">Location_for_above_items:</label><br>
+        <input type ="text" id = "Location_for_above_items" name="Location_for_above_items" value="0"><br>
+        <input type ="submit" value="Submit">
+      </form>
+</body>
+</html>
